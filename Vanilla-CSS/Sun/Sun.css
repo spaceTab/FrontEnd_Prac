@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+  }
+  html, body {
+    align-items: center;
+    background: linear-gradient(45deg, dodgerblue, rebeccapurple);
+    display: flex;
+    font-family: 'Heebo', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    padding: 0;
+    width: 100vw;
+  }
+
+  .sun {
+      background-color: yellow;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+     justify-content: flex-end;
+  }
+
+  .cloud{
+    width:200px;
+    height:60px;
+    background:white;
+    position:relative;
+    border-radius:200px;
+    -webkit-border-radius:200px;
+    -moz-border-radius:200px;
+  }
+
+  @keyframes rise {
+      from
+  }

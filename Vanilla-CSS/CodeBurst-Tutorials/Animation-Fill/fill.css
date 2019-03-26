@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:800');
+
+* {
+    box-sizing: border-box;
+  }
+  html, body {
+    align-items: center;
+    background: linear-gradient(45deg, dodgerblue, rebeccapurple);
+    display: flex;
+    font-family: 'Heebo', sans-serif;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    padding: 0;
+    width: 100vw;
+  }
+.sign {
+    background: #dcaa23;
+    border-radius: 10px;
+    position: relative;
+    padding: 5px;
+  }
+.sign > div {
+    font-size: 2rem;
+    background: #111;
+    color: #f09368;
+    padding: 0 5px;
+  }
+.sign > div:nth-of-type(1) {
+    border-radius: 10px 10px 0 0;
+  }
+.sign > div:nth-of-type(2) {
+    border-radius: 0 0 10px 10px;
+  }
+
+  div > div:nth-of-type(1) {
+      animation-name: lightsOff;
+      animation-duration: .15s;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+  }
+
+  div > div:nth-of-type(2) {
+      animation-name: lightsOn;
+      animation-duration: .15s;
+      animation-delay: 1.15s;
+      animation-fill-mode: backwards;
+  }
+
+  @keyframes lightsOff {
+      to {
+          color: #000;
+      }
+  }
+
+  @keyrames lightsOn {
+      from {
+          color: #000;
+      }
+  }

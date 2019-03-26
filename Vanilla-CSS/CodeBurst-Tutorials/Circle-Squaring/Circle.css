@@ -1,0 +1,25 @@
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 300px;
+    display: flex;
+    margin-left: 250px;
+    background-color: paleturquoise;
+    animation: squarePath 2s;
+}
+
+@keyframes squarePath {
+    0%, 100% {
+        transform: translate(-100%, -100%);
+    }
+    25% {
+        transform: translate(100%, -100%);
+    }
+    50% {
+        transform: translate(100%, 100%);
+    }
+    75% {
+        transform: translate(-100%, 100%)
+    }
+}

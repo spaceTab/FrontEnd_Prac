@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    align-items: center;
+    background: linear-gradient(45deg, rebeccapurple, dodgerblue);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    padding: 0;
+    width: 100vw;
+  }
+input {
+    margin: 4px;
+  }
+  input, label {
+    cursor: pointer;
+  }
+
+:checked ~ div {
+    animation-play-state: running;
+}
+ 
+label[type=checkbox]:checked {
+    content: "spinning";
+    color: green;
+}
+
+div {
+    animation: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+    background-color: #2eec71;
+    height: 250px;
+    width: 250px;
+
+    margin: 75px auto;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
