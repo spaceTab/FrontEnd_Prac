@@ -2,7 +2,7 @@
     box-sizing: border-box;
   }
   html, body {
-    align-items: center;
+    justify-content: center;
     background: linear-gradient(45deg, dodgerblue, rebeccapurple);
     display: flex;
     font-family: 'Heebo', sans-serif;
@@ -10,17 +10,25 @@
     min-height: 100vh;
     padding: 0;
     width: 100vw;
+    animation: sky 4s;
   }
+  .container {
+    justify-content: center;
+    margin-top: 50px;
 
+  }
   .sun {
+    display: flex;
       background-color: yellow;
       border-radius: 50%;
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
      justify-content: flex-end;
+     animation: rise 8s infinite;
+    justify-content: center;
   }
 
-  .cloud{
+  /* .cloud{
     width:200px;
     height:60px;
     background:white;
@@ -29,7 +37,65 @@
     -webkit-border-radius:200px;
     -moz-border-radius:200px;
   }
+= */
+.cloud {
+  display:inline-block;
+  background:white;
+  width:120px;
+  height:120px; 
+  border-radius:50%;
+  position:relative;
+  top:-30px;
+  -webkit-filter: blur(6px);
+  z-index:11;
+  
+  opacity:0.76;
+}
+.cloud:before {
+  content:"";
+  display:inline-block;
+  background:white;
+  width:100px;
+  height:100px; 
+  -webkit-filter: blur(3px);
+  position:relative;
+  border-radius:50%;
+  top:-30px;
+  left:60px;
+}
+.cloud:after {
+  content:"";
+  display:inline-block;
+  background:white;
+  width:200px;
+  height:100px; 
+  -webkit-filter: blur(3px);
+  position:relative;
+  border-radius:50%;
+  top:-80px;
+  left:70px;
+}
+
+.cloud:first-child {zoom:1.5;}  
+
 
   @keyframes rise {
-      from
+      0% {
+        transform: translateY(600px);
+      }
+      100%  {
+        transform: translateY(-600px);
+      }
+  }
+  
+  @keyframes sky {
+    100% {
+        position:absolute;
+        width:100%;
+        background: #4B79A1;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #283E51, #0A2342);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, #283E51, #0A2342); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: -olinear-gradient(to top, #283E51, #0A2342); 
+        height: 100vh;
+    }
   }
