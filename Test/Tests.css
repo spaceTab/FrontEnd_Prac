@@ -1,0 +1,13 @@
+body{
+    margin: 0 auto;
+    display: flex;
+}
+
+.lHead {
+    padding: 10px;
+    background-color: dodgerblue;
+    flex-wrap: nowrap;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
