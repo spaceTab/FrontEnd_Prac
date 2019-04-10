@@ -51,7 +51,7 @@
   
   opacity:0.76;
 }
-.cloud:before {
+.cloud::before {
   content:"";
   display:inline-block;
   background:white;
@@ -63,7 +63,7 @@
   top:-30px;
   left:60px;
 }
-.cloud:after {
+.cloud::after {
   content:"";
   display:inline-block;
   background:white;
